@@ -1,0 +1,29 @@
+p {
+    color: yellow
+}
+
+/*#test{
+    color: red;
+}
+.test {
+    color: green !important;
+}*/
+
+/**{
+    color: red;
+}*/
+div > span {
+    color: green;
+}
+
+div > #ui {
+    color: black;
+}
+
+div + span {
+  color: red;
+}
+
+div ~ p {
+    color: red;
+}
