@@ -1,6 +1,10 @@
 p {
     color: yellow
 }
+body {
+    height: 100px;
+    overflow: auto;
+}
 
 /*#test{
     color: red;
@@ -26,4 +30,8 @@ div + span {
 
 div ~ p {
     color: red;
+}
+.position {
+    position: relative;
+    top:80px;
 }
