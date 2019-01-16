@@ -35,3 +35,71 @@ div ~ p {
     position: relative;
     top:80px;
 }
+
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+
+a:visited {
+    color: black;
+}
+li:first-child {
+   font-size: x-large;
+}
+li:nth-child(odd){
+    color: red;
+}
+li:nth-child(even){
+    color: green;
+}
+li:last-child {
+    font-size: xx-large;
+}
+li::before{
+    content: "hello";
+}
+li::after {
+    content: url(1.jpeg);
+    width:20px;
+    height:20px;
+}
+div::first-letter{
+    color:red;
+}
+div::first-line {
+    color:green;
+}
+
+
+
+
+
+/* phone*/
+/*@media only screen and (min-width: 768px){
+    .rwd {
+        display:block;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .rwd {
+        display:inline-block;
+        width: 40%;
+    }
+}*/
+
+@media only screen and (max-width: 768px){
+    .rwd {
+        display:block;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .rwd {
+        display:inline-block;
+        width: 40%;
+    }
+}
