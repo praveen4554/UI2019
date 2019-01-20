@@ -73,7 +73,9 @@ div::first-line {
     color:green;
 }
 
-
+.rwd {
+    max-height: 10px;
+}
 
 
 
@@ -91,7 +93,7 @@ div::first-line {
     }
 }*/
 
-@media only screen and (max-width: 768px){
+/*@media only screen and (max-width: 768px){
     .rwd {
         display:block;
     }
@@ -100,6 +102,26 @@ div::first-line {
 @media only screen and (max-width: 1024px){
     .rwd {
         display:inline-block;
-        width: 40%;
+        width: 30%;
     }
-}
+}*/
+
+ .rwd {
+     display: inline-block;
+     width: 30%;
+ }
+
+ .container {
+     display: flex;
+     background-color: blue;
+ }
+
+ .container > div {
+    color: red;
+    border: 4px solid;
+    padding: 50px;
+    margin: 5px; 
+    flex-shrink: 1;  
+ }
+
+ 

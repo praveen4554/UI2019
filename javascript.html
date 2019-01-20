@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        </script>
+        <!--<script type="text/javascript" src=""/>-->
+    </head>
+    <body>
+        <p id="test" class="test" name="praveen">praveen
+            <span>aksdkn</span>
+        </p>
+        <input type="text" id="test1" class="test" value="praveen" name="praveen"/>
+        <button onclick="update()" class="test" >update p tag</button>
+        <script>
+        function update(){
+            a=10;
+            /*after api response
+              
+            if(guestuser)
+               document.getElementById("userName").innerHTML = "Guest";
+            else
+                document.getElementById("userName").innerHTML = "USERNAME";
+            */
+            alert("Hello");
+            console.log("Hello");
+            document.getElementById("test").innerHTML = document.getElementById("test1").value;
+              if(  document.getElementById("test").innerHTML === "praveen")
+                    document.getElementById("test").style.color = "red";
+             else 
+             document.getElementById("test").style.color = "green";
+        }
+        // document.write("praveen");
+        //
+        /**
+          dom -- document object model 
+               html
+            head    body
+          p tag it doesnt have any value -- html <p>praveen</p>
+          <input type="text"/> . value="depthi"
+        */
+        /**
+        Data types -- Boolean null undefined Number String 
+       var functional scope memory leakage 
+       lastname and lastName
+       nnames can contain
+       1.letters,digits,underscores and dollar signs
+       2.Names must begin with letter or (_,$)
+       3. Names can not be used same as reserve keywords
+       var a=10;
+       a++; ++a;
+       javascript is a single thread
+       arithmetic operators +,-,*,%
+       a+=10; a=a+10;
+       a-=10;
+       == ===
+       == it always looks for the value
+       === it looks for the value and data type 
+       2 kinds of functions
+       1. pure functions
+       2. impure functions
+       add(a,b) { return a+b; } var a=10; increment(a){ return a++;}
+
+       javascript NaN -- not a number
+       while(1){ 
+           console.log(10);
+       }
+       while and do while loop
+       for
+       for in 
+       alert
+       console.log
+        */
+        </script>
+    </body>
+</html>
+
+
