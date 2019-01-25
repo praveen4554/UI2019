@@ -10,10 +10,64 @@
             <span>aksdkn</span>
         </p>
         <input type="text" id="test1" class="test" value="praveen" name="praveen"/>
-        <button onclick="update()" class="test" >update p tag</button>
+        <button class="test" onclick="sendData(this)">update p tag</button>
+        <div onclick="test()">
+            <p onclick="test1(event)">praveen</p>
+            <p onclick="test2()">kumar</p>
+        </div>
         <script>
+        'use strict';
+        function test(){
+            console.log('div');
+        }
+        function test1(event){
+            event.stopPropagation();
+            console.log('div1');
+        }
+        function test2(){
+            console.log('div2');
+        }
+       var a=10;
+        for(var i=0;i<5;i++){
+            if(i===2)
+                continue;
+            console.log(i);
+        }//0,1,2,3,4 //0,1,3,4
+        for(var i=0;i<5;i++){
+            if(i===2)
+                break;
+            console.log(i);
+        }//0,1  //0
+        [{val:10},{val:5},{val:2}].find(function(a){ 
+            console.log(a); 
+            return a.val === 2});
+            [1,2,3,45].forEach(function(val){
+                console.log(val);
+            });
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        function getData(val){
+            this.val = val;
+            this.value = function() {
+                return this.val;
+            }
+        }
+        function sendData(val){
+          Person.prototype.getData = new getData(10);
+          var person = new Person('praveen',26);
+          console.log(Person.prototype);
+          console.log(person.getData.val);
+        }
         function update(){
             a=10;
+            console.log(this);
+            function event(){
+                var a=20;
+                console.log(this.a);
+            }
+            event();
             /*after api response
               
             if(guestuser)
@@ -69,9 +123,71 @@
        for in 
        alert
        console.log
+       onclick
+       onload
+       keypress
+       json  objects -- xml extend markup language 
+       <praveen></praveen>
+       handshake -- share the info from ui to backend 
+       <name>praveen</name>
+       <age>26</age>
+       soap 
+       rest -- obj 
+       {
+           name: praveen,
+
+       }
+
+       inheritance -- prototype
+       it will get the properties or methods of parent class to child class
+
+       getData -- parent class child class - Person
+
+       sendData -- obj which should access all the methods in Person and get Data 
+        (function(){
+
+        })();
+        iife -- imediately invoked function expression 
+        singleton -- object once it will share the instance 
+        module patter
+        factory pattern 
+
         */
+        // closures
+        // iife -- imediately invoked function expression 
+        // RegExp
+        // call
+        // apply
+        /*
+        global scope and local scope
+        add5 -- x inner y
+        add10 -- x inner y
+        */
+        // function makeAdd(x){
+        //     addy(this);
+        // }
+        // function addy(y){
+        //     return this.x+y;
+        // }
+        function makeAdd(x){
+            return function(y){
+                return x+y;
+            }
+        }
+        var add5 = makeAdd(5);// diff scope 
+        var add10 = makeAdd(10); // diff scope 
+        console.log(add5(2)); //7
+        console.log(add10(2)); // 12
+        var result =(function(){
+            var ac=10;
+            return ac;
+        })();
+
+        console.log(result);
         </script>
     </body>
 </html>
+
+
 
 
